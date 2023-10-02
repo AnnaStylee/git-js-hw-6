@@ -5,29 +5,31 @@
 // Додасть елементу клас item.
 // Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 
-// const ingredients = [
-//   "Potatoes",
-//   "Mushrooms",
-//   "Garlic",
-//   "Tomatos",
-//   "Herbs",
-//   "Condiments",
-// ];
+const ingredientsList = document.querySelector('#ingredients');
 
-// const ingredientsList = document.querySelector('#ingredients');
-// console.log(ingredientsList);
+const ingredients = [
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
+];
 
-// const fragment = document.createDocumentFragment();
 
-// ingredients.forEach((ingredient) => {
-// const listItem = document.createElement('li');
+const fragment = document.createDocumentFragment();
 
-// listItem.textContent = ingredient;
+ingredients.forEach((ingredient) => {
 
-// listItem.classList.add('item');
+const listItem = document.createElement('li');
 
-// ingredientsList.appendChild(listItem);
+listItem.textContent = ingredient;
 
-// });
+listItem.classList.add('item');
 
-// ingredientsList.appendChild(fragment);
+ingredientsList.appendChild(listItem);
+
+});
+
+ingredientsList.appendChild(fragment);
+
